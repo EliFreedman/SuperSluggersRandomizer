@@ -1,3 +1,3 @@
-SET PATH=%PATH%;C:\Users\elibf\OneDrive\Desktop
+SET PATH=%PATH%;C:\Users\FILEPATH
 py Randomizer.py
 PAUSE
