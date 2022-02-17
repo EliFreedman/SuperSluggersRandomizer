@@ -16,10 +16,10 @@ def ranTeam():
 
   # There are two character types:
   #     Captains and Players.
-  
+  #
   # A Captain has an index between 2 - 13.
   # A Player has an index between 14 - 72
-
+  #
   # The first player in each team should be a captain.
 
   # Random Captains
@@ -28,9 +28,18 @@ def ranTeam():
   team1.append(captainRoster[0])
   team2.append(captainRoster[1])
   
-  # Create a list of 16 random players
-  roster = random.sample(names[14:72], 16)
-  
+  # Create a list of 16 random players and captains
+
+  # Removes the 2 captains chosen and readds them after roster
+  t1c = team1[0]
+  t2c = team2[0]
+  names.remove(t1c)
+  names.remove(t2c)
+  roster = random.sample(names[2:72], 16)
+  names.insert(2, t1c)
+  names.insert(2, t2c)
+
+  # Add players from roster into each team
   for player in roster:
     if len(team1) != 9:
       team1.append(player)
@@ -45,4 +54,8 @@ def ranTeam():
   for player in team2:
     print(player)
 
-ranTeam()
+def main():
+  
+  ranTeam()
+
+main()
