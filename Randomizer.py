@@ -35,7 +35,7 @@ def ranTeam():
   t2c = team2[0]
   names.remove(t1c)
   names.remove(t2c)
-  roster = random.sample(names[2:72], 16)
+  roster = random.sample(names[2:70], 16)
   names.insert(2, t1c)
   names.insert(2, t2c)
 
