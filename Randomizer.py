@@ -54,8 +54,23 @@ def ranTeam():
   for player in team2:
     print(player)
 
+def ranStadium():
+
+  # There are 15 stadiums
+  # Some of the stadiums have two variations: Day and Night
+  #
+  # All stadiums fall between the index 73 - 87
+
+  # Random Stadium
+  stadium = random.sample(names[73:87], 1)
+
+  # Output
+  print('\nStadium:')
+  print(stadium[0])
+
 def main():
   
   ranTeam()
+  ranStadium()
 
 main()
